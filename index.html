@@ -1,23 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR Display</title>
+    <title>AR Furniture Display</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 </head>
 <body>
-    <a-scene embedded arjs>
-        <!-- AR Camera -->
-        <a-marker preset="hiro">
-            <a-entity id="furniture" position="0 0 0">
-                <!-- Add your 3D frniture model here -->
-                <a-entity gltf-model="assets\robo.gltf"></a-entity>
-            </a-entity>
-        </a-marker>
-
-        <!-- AR Camera -->
-        <a-entity camera></a-entity>
+    <a-scene embedded arjs="sourceType: webcam;">
+        <!-- Add your 3D model here -->
+        <a-entity id="furnitureModel" gltf-model="assets\robo.gltf"></a-entity>
     </a-scene>
 </body>
 </html>
