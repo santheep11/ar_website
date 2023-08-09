@@ -7,8 +7,19 @@
 </head>
 <body>
     <a-scene embedded arjs="sourceType: webcam;">
-        <!-- Add your 3D model here -->
-        <a-entity id="furnitureModel" gltf-model="assets\robo.gltf"></a-entity>
+        <!-- AR Marker -->
+        <a-marker preset="hiro">
+            <!-- Add your 3D model here -->
+            <a-entity
+                id="furnitureModel"
+                gltf-model="assets\robo.gltf"
+                position="0 0 0"
+                scale="1 1 1"
+                rotation="0 0 0"
+            ></a-entity>
+        </a-marker>
+        
+        <a-entity camera></a-entity>
     </a-scene>
 </body>
 </html>
